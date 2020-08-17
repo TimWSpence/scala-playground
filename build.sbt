@@ -5,26 +5,17 @@ lazy val root = (project in file("."))
     organization := "org.timspence",
     name := "scala-playground",
     version := "0.0.1-SNAPSHOT",
-    scalaVersion := "2.12.8",
+    scalaVersion := "2.13.3",
     libraryDependencies ++= Seq(
       "org.http4s"                 %% "http4s-blaze-server" % Versions.http4s,
       "org.http4s"                 %% "http4s-circe"        % Versions.http4s,
       "org.http4s"                 %% "http4s-dsl"          % Versions.http4s,
       "org.typelevel"              %% "cats-core"           % Versions.cats,
       "org.typelevel"              %% "cats-effect"         % Versions.catsEffect,
-      "com.github.julien-truffaut" %%  "monocle-core"       % Versions.monocle,
-      "com.github.julien-truffaut" %%  "monocle-macro"      % Versions.monocle
+      "com.github.julien-truffaut" %% "monocle-core"        % Versions.monocle,
+      "com.github.julien-truffaut" %% "monocle-macro"       % Versions.monocle,
+      "org.typelevel"              %% "cats-mtl-core"       % Versions.catsMtl
     ),
-    addCompilerPlugin("org.spire-math" %% "kind-projector"     % "0.9.9"),
-    addCompilerPlugin("com.olegpy"     %% "better-monadic-for" % "0.3.0-M4")
+    addCompilerPlugin("org.typelevel" %% "kind-projector"     % "0.11.0" cross CrossVersion.full),
+    addCompilerPlugin("com.olegpy"     %% "better-monadic-for" % "0.3.1")
   )
-
-scalacOptions ++= Seq(
-  "-deprecation",
-  "-encoding", "UTF-8",
-  "-language:higherKinds",
-  "-language:postfixOps",
-  "-feature",
-  "-Ypartial-unification",
-  "-Xfatal-warnings",
-)

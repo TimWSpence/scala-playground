@@ -1,4 +1,4 @@
-package org.timspence.scalaplayground
+package org.timspence.scalaplayground.http4s
 
 import cats.effect.Sync
 import io.circe.Json
