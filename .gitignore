@@ -1,4 +1,3 @@
-
 # Created by https://www.toptal.com/developers/gitignore/api/scala,sbt,vim,emacs,metals,bloop
 # Edit at https://www.toptal.com/developers/gitignore?templates=scala,sbt,vim,emacs,metals,bloop
 
@@ -58,7 +57,7 @@ flycheck_*.el
 
 ### Metals ###
 .metals/
-project/metals.sbt
+metals.sbt
 
 ### SBT ###
 # Simple Build Tool
